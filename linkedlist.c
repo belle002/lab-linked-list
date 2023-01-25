@@ -4,18 +4,29 @@
 #include <stdio.h>
 #include <stdlib.h> // contains the functions free/malloc
 
-// TODO: Create your node_t type here
+typedef struct  note_t 
+{
+    int num_wins;
+    int ywear;
+    struct node_t* next;
+} node_t;
+   
+node_t* new_node(int wins, int year, note_t* next) {
 
-// TODO: Write your functions here
-// There should be 1.) create_list 2.) print_list 3.) free_list
-// You may create as many helper functions as you like.
+   node_t* newnote = (note_t*) malloc(sizeof(note_t));
+
+   newnote->num_wins = wins;
+   newnote->year = year;
+   newnote->next = next; 
+
+   return newNode;
+}
 
 int main()
 {
-    int test_years[5] = {2018, 2017, 2016, 2015, 2014};
-    int test_wins[5] = {108, 93, 93, 78, 71};
-
-    // TODO: Implement me!
+    note_t* head;
+    head = new_note(10, 5, NULL);
+    printf("%d %d\n", head->year, head->num-wins);
 
     return 0;
 }
