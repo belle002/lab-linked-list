@@ -4,28 +4,28 @@
 #include <stdio.h>
 #include <stdlib.h> // contains the functions free/malloc
 
-typedef struct  note_t 
+typedef struct  node_t 
 {
     int num_wins;
     int ywear;
     struct node_t* next;
 } node_t;
    
-node_t* new_node(int wins, int year, note_t* next) {
+node_t* new_node(int wins, int year, node_t* next) {
 
-   node_t* newnote = (note_t*) malloc(sizeof(note_t));
+   node_t* newnode = (node_t*) malloc(sizeof(node_t));
 
-   newnote->num_wins = wins;
-   newnote->year = year;
-   newnote->next = next; 
+   newNode->num_wins = wins;
+   newNode->year = year;
+   newNode->next = next; 
 
    return newNode;
 }
 
 int main()
 {
-    note_t* head;
-    head = new_note(10, 5, NULL);
+    node_t* head;
+    head = new_node(10, 5, NULL);
     printf("%d %d\n", head->year, head->num-wins);
 
     return 0;
